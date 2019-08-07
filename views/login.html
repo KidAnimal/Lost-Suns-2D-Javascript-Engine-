@@ -1,0 +1,17 @@
+<div ng-controller="gameController"> 
+    <div class="characterDetails"> {{ characterName | validate}} </div>
+    <form name="character" class="characterForm">
+        <label>UserName:  
+            <input type="text" ng-model="userName" placeholder="userID" required=""/>
+        </label>
+        <label>Class: 
+            <select name="class" ng-model="region" placeholder="Europe" Default="Europe">
+                <option value="North America">North America</option>
+                <option value="Europe">Europe</option>
+                <option value="Asia">Asia</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </label>
+        <button ng-click="onSubmit()" name="loginButton">Save Profile</button>
+    </form>
+</div>

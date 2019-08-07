@@ -1,0 +1,26 @@
+<lootTable>	
+    <loot>
+        <name>Guilded-Claw Gloves</name>
+        <type>Weapon</type>
+        <buff>+5 Health</buff>
+        <debuff>None</debuff>
+    </loot>
+     <loot>
+        <name>Fel-Stippled Leggings</name>
+        <type>Clothes</type>
+        <buff>+1 to Warmth</buff>
+        <debuff>-5 to Comfort</debuff>
+    </loot>
+    <loot>
+        <name>Amulet of Amauranth</name>
+        <type>Jewlry</type>
+        <buff>Stops Hunger Increase For 1 Minute</buff>
+        <debuff>-1 health</debuff>
+    </loot>
+    <loot>
+        <name>Mystic Wakener's Dirk</name>
+        <type>Weapon</type>
+        <buff>Stops Hunger Increase For 1 Minute</buff>
+        <debuff>-1 health</debuff>
+    </loot>
+</lootTable>
