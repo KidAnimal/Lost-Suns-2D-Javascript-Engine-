@@ -1,0 +1,100 @@
+.header 
+{
+    padding:40px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+.header a
+{
+    text-decoration: none;
+    margin-right:60px;
+    font-size:1em;
+    color:black;
+    font-family: 'Gugi', cursive;
+}
+span
+{
+    font-size:30px;
+    font-family: 'Gugi', cursive;
+    /* color:white; */
+    white-space: initial;
+}
+.gameContainer
+{
+    position: relative;
+    width:50%;
+    margin-right:auto;
+    margin-left:auto;
+
+}
+.infoContainer
+{
+    /* position: absolute; */
+    /* top:450px; */
+}
+.player
+{
+    position:absolute;
+    top:70px;
+    color: white;
+}
+.charDetails
+{
+    margin-left:50px;
+    display: block;
+    white-space: initial;
+}
+.boss
+{
+    position:absolute;
+    top:450px;
+    color: white;
+}
+.bossDetails
+{
+    right:100;
+    margin-left:700px;
+    display: block;
+    white-space: initial;
+}
+.dialogue
+{
+    padding:2em;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+li 
+{ 
+    list-style-type: none;
+}
+#timer 
+{
+    position: absolute;
+    right:0px;
+    top:10px;
+    color:white; 
+    font-size:10;
+}
+.viewItems 
+{
+    position: absolute;
+    right:80px;
+    top:10px;
+    font-size:10;
+}
+.viewItems li
+{
+    color:white;
+}
+.characterDetails
+{
+    position:absolute;
+    top:30px;
+    color: white;
+    margin-left:50px;
+    font-size:30px;
+    font-family: 'Gugi', cursive;
+
+}
