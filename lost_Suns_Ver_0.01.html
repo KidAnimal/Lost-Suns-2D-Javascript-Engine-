@@ -3,23 +3,18 @@
 
 <!--In order to decrease the amount of downloading for the user I have tried 
     to include a few CDNs including google fonts -->
+
 <head>
     <title>Game Tests</title>
     <link rel="stylesheet" type="text/css" href="./css/game.css">
     <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
-    <script src="./javascript/angular157.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
-    <script src="https://rawgit.com/grevory/angular-local-storage/master/dist/angular-local-storage.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
-    <script src="./javascript/stateSetup.js"></script>
-    <script src="./javascript/lost_Suns_Ver_0.0.4.js"></script>
-    <script src="./javascript/game_Controller.js"></script>
+
 </head>
 <!--Loads the controller and the XML data-->
+
 <body ng-controller="gameController" ng-init="dataLoad()">
 
-<!--Defines the route paths for the HTML document-->
+    <!--Defines the route paths for the HTML document-->
     <div class="header">
         <a href="#/">Main</a>
         <a href="#/instructions">Instructions</a>
@@ -29,15 +24,15 @@
     <div class="gameContainer">
         <div id="main_window"></div>
 
-    <!--Counter which helps update the game in the Angular JS file. Acts almost like a game loop-->
+        <!--Counter which helps update the game in the Angular JS file. Acts almost like a game loop-->
         <div id="timer"> {{ count }} </div>
         <div class="infoContainer">
-    
-    <!--When an item can be looted these buttons appear and allow for looting-->
+
+            <!--When an item can be looted these buttons appear and allow for looting-->
             <button id="loot" type="submit" onclick="loot()" style="visibility: hidden">Loot</button>
             <button id="endLoot" type="submit" onclick="endLoot()" style="visibility: hidden" ng-hide>Discard</button>
             <div>
-            <!--Player is bound to the HTML document-->
+                <!--Player is bound to the HTML document-->
                 <div class="player">
                     <!-- <span class="charDetails">{{ characterName }}</span> -->
                     <span class="charDetails">{{ characterType }}</span>
@@ -50,21 +45,36 @@
                     <span class="bossDetails">{{ bossHealth }}</span>
                 </div>
                 <!--This button is hit to toggle the item list-->
-                <button class ="viewItems" ng-click="toggle=!toggle">{{ toggle ? 'Hide Items' : 'Show All Obtainable Items' }}</button>
+                <button class="viewItems"
+                    ng-click="toggle=!toggle">{{ toggle ? 'Hide Items' : 'Show All Obtainable Items' }}</button>
 
                 <!--Items for item list needed to be hardcoded as they were obtained from local storage from the plain JS file-->
-                <ul class ="viewItems" ng-show="toggle">
+                <ul class="viewItems" ng-show="toggle">
                     <li draggable="true"> {{ items[0].name }} </li>
                     <li draggable="true"> {{ items[1].name }} </li>
                     <li draggable="true"> {{ items[2].name }} </li>
-                    <li draggable="true"> {{ items[3].name }} </li>    
+                    <li draggable="true"> {{ items[3].name }} </li>
                 </ul>
             </div>
-    </div>
-    <!--Routes are Loaded Here-->
-    <div ng-view></div>
+        </div>
+        <!--Routes are Loaded Here-->
+        <div ng-view></div>
 
+    <div id="temporarySelection area">
+        <button type="button" onclick="selectedAbility();">Cycle Through Abilities</button>
+        <div id="selectedContainer"></div>
     </div>
+    <div id="level"></div>
+    <div id="experience"></div>
+    </div>
+    <script src="./javascript/angular157.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+    <script src="https://rawgit.com/grevory/angular-local-storage/master/dist/angular-local-storage.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+    <script src="./javascript/stateSetup.js"></script>
+    <script src="./javascript/lost_Suns_Ver_0.0.9.js"></script>
+    <script src="./javascript/game_Controller.js"></script>
 </body>
 
 </html>
